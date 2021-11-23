@@ -30,36 +30,32 @@ if (!$_SESSION['pseudo']) {
         $adresse = "../fichiers/";
         $dossier = Opendir($adresse);
         while ($Fichier = readdir($dossier)) {
-            if ($Fichier != "." && $Fichier != "..") // Filtre antipoint !<br/>
-            {
-        ?>
-                <section>
-                    <table class="tableau"></table>
-                    <tr>
-                        <td><a href="voir_fichiers.php?nom='<?= '' . $Fichier . '' ?>'">Supprimer</a></td>
-                        <td><a href='<?= "" . $adresse . $Fichier . "" ?>' target="_blank"><?= "" . $Fichier . "" ?></a></td>
-                        <td>
-                            <p>la taille est de'<?= '' . filesize($Fichier) . "" ?>' </p>
-                        </td>
+            if ($Fichier != "." && $Fichier != "..") { ?>
+                <table class="tableau">
+                    <tr class="nomcat">
+                        <td>action</td>
+                        <td>Mot de passe</td>
+                        <td>Date création</td>
                     </tr>
-                </section>
-        <?php
+                    <tr>
+                        <td><a href="voir_fichiers.php?nom=<?= "" . $Fichier . "" ?>">Supprimer</a></td>
+                        <td><a href=<?= "" . $adresse . $Fichier . "" ?> target="_blank">'<?= "" . $Fichier . "" ?></a></td>
+                        <td></td>
+                    </tr>
+            <?php
+
             }
         }
         closedir($dossier);
 
 
+            ?>
 
+            </td>
+            </tr>
+                </table>
 
-
-
-
-        ?>
-
-        </td>
-        </tr>
-        </table>
-
+</body>
 
 </html>
 </div>
