@@ -27,34 +27,11 @@ if (!$_SESSION['pseudo']) {
 <body>
     <div class="eltableau">
         <?php
-        $adresse = "../fichiers/";
-        $dossier = Opendir($adresse);
-        while ($Fichier = readdir($dossier)) {
-            if ($Fichier != "." && $Fichier != "..") {
-        ?>
-                <table class="tableau">
-                    <tr class="nomcat">
-                        <td>action</td>
-                        <td>Mot de passe</td>
-                        <td>Date création</td>
-                    </tr>
-                    <tr>
-                        <td><a href="voir_fichiers.php?nom=<?= "" . $Fichier . "" ?>">Supprimer</a></td>
-                        <td><a href=<?= "" . $adresse . $Fichier . "" ?> target="_blank">'<?= "" . $Fichier . "" ?></a></td>
-                        <td></td>
-                    </tr>
-            <?php
-
-            }
+        $scandir = scandir("../fichiers");
+        foreach ($scandir as $fichier) {
+            echo "$fichier<br/>";
         }
-        closedir($dossier);
-
-
-            ?>
-
-            </td>
-            </tr>
-                </table>
+        ?>
 
 </body>
 
