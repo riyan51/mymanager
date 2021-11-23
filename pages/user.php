@@ -57,11 +57,7 @@ if ($req->execute()) {
         <section id="dashboard">
             <!-- Moteur de recherche -->
 
-            <section class="afficher_all">
 
-
-
-            </section>
             <!-- Liste des clients -->
             <table class="tableau">
                 <tr class="nomcat">
@@ -90,6 +86,7 @@ if ($req->execute()) {
                 <?php } ?>
             </table>
         </section>
+    </section>
 
 
 

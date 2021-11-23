@@ -7,9 +7,6 @@
             <a href="../pages/voir_fichier.php">Mes fichiers</a>
         </li>
         <li>
-            <a href="">on verra</a>
-        </li>
-        <li>
             <a href="../pages/user.php">Gestion des utilisateurs</a>
         </li>
         <li>
