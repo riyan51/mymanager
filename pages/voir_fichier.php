@@ -30,7 +30,8 @@ if (!$_SESSION['pseudo']) {
         $adresse = "../fichiers/";
         $dossier = Opendir($adresse);
         while ($Fichier = readdir($dossier)) {
-            if ($Fichier != "." && $Fichier != "..") { ?>
+            if ($Fichier != "." && $Fichier != "..") {
+        ?>
                 <table class="tableau">
                     <tr class="nomcat">
                         <td>action</td>
